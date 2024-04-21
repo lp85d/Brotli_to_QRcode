@@ -1,4 +1,5 @@
 import qrcode
+from PIL import Image
 
 # Читаем данные из файла
 file_path = "C:\\Users\\user\\Desktop\\brotli.txt"
@@ -15,7 +16,11 @@ qr = qrcode.QRCode(
 qr.add_data(data)
 qr.make(fit=True)
 
-img = qr.make_image(fill_color="black", back_color="white").get_image()
-img.save('brotli_to_qr.png')
+# Получаем объект изображения из qrcode и преобразуем его в объект изображения из Pillow
+img = qr.make_image(fill_color="black", back_color="white")
+img_pillow = img.get_image()
+
+# Сохраняем изображение в файл
+img_pillow.save('brotli_to_qr.png')
 
 print("Один QR-код успешно создан для всех данных.")
