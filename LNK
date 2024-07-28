@@ -1,0 +1,1 @@
+powershell.exe -ExecutionPolicy Bypass -File "C:\Users\lp85d\Downloads\ANSI_1.ps1"
