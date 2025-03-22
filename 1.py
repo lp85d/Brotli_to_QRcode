@@ -57,23 +57,11 @@ def drag(event):
     deltay = event.y - y
     root.geometry(f"+{root.winfo_x()+deltax}+{root.winfo_y()+deltay}")
 
-def show_bg_opacity_value(event):
-    value = bg_opacity.get()
-    opacity_value_label.config(text=f"Прозрачность фона: {value:.2f}")
-    opacity_value_label.place(x=5, y=15)
-    root.after(2000, lambda: (opacity_value_label.place_forget(), bg_opacity.place_forget()))
-
-def show_text_opacity_value(event):
-    value = text_opacity.get()
-    opacity_value_label.config(text=f"Прозрачность текста: {value:.2f}")
-    opacity_value_label.place(x=5, y=15)
-    root.after(2000, lambda: (opacity_value_label.place_forget(), text_opacity.place_forget()))
-
-def show_freq_value(event):
-    value = int(update_freq.get())
-    freq_value_label.config(text=f"Интервал: {value} сек")
-    freq_value_label.place(x=5, y=15)
-    root.after(2000, lambda: (freq_value_label.place_forget(), update_freq.place_forget()))
+def show_value(event, slider, label, value_type=""):
+    value = slider.get()
+    label.config(text=f"{value_type}: {value:.2f}" if value_type else f"Интервал: {value} сек")
+    label.place(x=5, y=15)
+    root.after(2000, lambda: (label.place_forget(), slider.place_forget()))
 
 root = tk.Tk()
 root.overrideredirect(True)
@@ -93,19 +81,19 @@ bg_opacity = tk.Scale(root, from_=0.1, to=1.0, resolution=0.01, orient="h", leng
 bg_opacity.set(0.8)
 bg_opacity.place(x=2, y=15)
 bg_opacity.place_forget()
-bg_opacity.bind("<ButtonRelease-1>", show_bg_opacity_value)
+bg_opacity.bind("<ButtonRelease-1>", lambda event: show_value(event, bg_opacity, opacity_value_label, "Прозрачность фона"))
 
 text_opacity = tk.Scale(root, from_=0.1, to=1.0, resolution=0.01, orient="h", length=130, showvalue=0, command=update_text_opacity)
 text_opacity.set(1.0)
 text_opacity.place(x=2, y=15)
 text_opacity.place_forget()
-text_opacity.bind("<ButtonRelease-1>", show_text_opacity_value)
+text_opacity.bind("<ButtonRelease-1>", lambda event: show_value(event, text_opacity, opacity_value_label, "Прозрачность текста"))
 
 update_freq = tk.Scale(root, from_=1, to=60, resolution=1, orient="h", length=130, showvalue=0)
 update_freq.set(10)
 update_freq.place(x=2, y=15)
 update_freq.place_forget()
-update_freq.bind("<ButtonRelease-1>", show_freq_value)
+update_freq.bind("<ButtonRelease-1>", lambda event: show_value(event, update_freq, freq_value_label))
 
 opacity_value_label = tk.Label(root, text="", font=("Arial", 8), fg="black", bg="#d9d9d9")
 freq_value_label = tk.Label(root, text="", font=("Arial", 8), fg="black", bg="#d9d9d9")
