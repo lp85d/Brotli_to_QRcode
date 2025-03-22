@@ -10,7 +10,7 @@ Add-Type @"
 Add-Type -AssemblyName System.Windows.Forms
 Add-Type -AssemblyName System.Net.Http
 
-function GetCryptoPrice { return (Invoke-WebRequest -Uri "https://min-api.cryptocompare.com/data/price?fsym=toncoin&tsyms=USD" | ConvertFrom-Json).USD }
+function GetCryptoPrice { return (Invoke-WebRequest -Uri "https://min-api.cryptocompare.com/data/price?fsym=TON&tsyms=USD" | ConvertFrom-Json).USD }
 
 function UpdateLabel { $label.Text = "TON: $(GetCryptoPrice) USD" }
 
