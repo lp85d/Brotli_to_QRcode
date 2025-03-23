@@ -1,5 +1,5 @@
 # Начнём с ASM 
-Переносим файл в папку C:\masm32\crypto_widget.asm
+Переносим файл в папку C:\masm32\crypto_widget.asm 
 Откроем в программе C:\masm32\qeditor.exe 
 Запускаем сборку Project -> Build All 
 Готово C:\masm32\crypto_widget.exe 
