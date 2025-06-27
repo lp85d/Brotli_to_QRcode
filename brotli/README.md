@@ -1,8 +1,8 @@
 Как всё упаковывалось:
-1. Наша задача запаковать исходный код ‪C:\Users\user\Desktop\ZALIVKA.py в Qrcode
-2. Запишем путь до файла в ‪C:\brotli\brotli2txt.py запустим и получим C:\brotli\brotli.txt  
-3. Сгенерируем base64 запустив ‪C:\brotli\decode_base64.py получим ‪C:\brotli\base64.txt
-4. Последний этап ‪собираем изображение C:\brotli\brotli_txt_to_qr.py вывод C:\brotli\base64_data_qr.png
+1. Наша задача запаковать исходный код ‪`C:\Users\user\Desktop\ZALIVKA.py` в Qrcode
+2. Запишем путь до файла в `‪C:\brotli\brotli2txt.py` запустим и получим `C:\brotli\brotli.txt`
+3. Сгенерируем base64 запустив `‪C:\brotli\decode_base64.py` получим `‪C:\brotli\base64.txt`
+4. Последний этап ‪собираем изображение `C:\brotli\brotli_txt_to_qr.py` вывод `C:\brotli\base64_data_qr.png`
 5. Готово!
 
 <img src="https://github.com/user-attachments/assets/025e8732-2cb8-4227-bf57-70542920d83d" alt="base64_data_qr" width="30%"/>
