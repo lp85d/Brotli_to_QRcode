@@ -1,6 +1,6 @@
 Как всё упаковывалось:
 1. Наша задача запаковать исходный код ‪C:\Users\user\Desktop\ZALIVKA.py в Qrcode
-2. Запишем путь до файла в ‪C:\brotli\brotli2txt.ps1 запустим и получим C:\brotli\brotli.txt
+2. Запишем путь до файла в ‪C:\brotli\brotli2txt.ps1 запустим и получим C:\brotli\brotli.txt  
 `C:\Windows\system32>powershell.exe -ExecutionPolicy Bypass -File "C:\brotli\brotli2txt.ps1"
 failed to open output file [C:\brotli\brotli.txt]: File exists`
 3. Сгенерируем base64 запустив ‪C:\brotli\decode_base64.py получим ‪C:\brotli\base64.txt
