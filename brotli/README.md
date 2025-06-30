@@ -15,5 +15,7 @@ Type "help", "copyright", "credits" or "license()" for more information.
 Размер данных (2162 байт) предположительно подходит для одного QR-кода.
 Один QR-код успешно создан и сохранен как 'brotli_data_qr.png'.
 Нажмите Enter, чтобы закрыть консоль...  `
+
 Это отработали `brotli_txt_to_qr_no_phone.py` и `Декодирования QR-кода обратно в бротили архив.py` для большего эффекта компрессии  
+
 <img src="https://github.com/user-attachments/assets/27fc7beb-665e-4b8d-8a9b-019db90b26c9" alt="base64_data_qr" width="30%"/>
