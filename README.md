@@ -13,3 +13,7 @@
 <p>Так же установите библиотеку если такой не имеется:<br /><code>pip install qrcode
  <br />pip install pillow<br /></code></p>
 <p>А теперь считаем <a href="https://github.com/lp85d/Brotli_to_QRcode/blob/main/brotli_to_qr.png">изображение</a>&nbsp;моей <a href="https://github.com/lp85d/Brotli_to_QRcode/blob/main/QRcode2Brotli2txt.cs">программой</a> таким&nbsp;образом легко получить исходный код из распечатанной картинки</p>
+
+LINK : fatal error LNK1104: cannot open file "crypto_widget.exe"
+Принудительно закройте заблокированный файл
+taskkill /f /im crypto_widget.exe
