@@ -51,7 +51,7 @@ BTN_OPACITY equ 1004
     DisplayText db 32 dup(0)
     TextColors dd 00FF00h, 0FFFFFFh, 0FFAAAAh, 00AAAAh, 0FFFF00h ; green, white, light red, light blue, yellow
     CurrentColorIndex dd 0
-    OpacityLevels db 204, 230, 255 ; 80%, 90%, 100%
+    OpacityLevels db 255, 100, 50 ; 80%, 90%, 100%
     CurrentOpacityIndex dd 0
     UpdateFrequencies dd 60000, 300000, 600000 ; 1min, 5min, 10min
     CurrentFreqIndex dd 0
@@ -96,7 +96,7 @@ MainWindow proc
     mov wc.hIcon, 0
     invoke LoadCursor, NULL, IDC_ARROW
     mov wc.hCursor, eax
-    mov wc.hbrBackground, COLOR_BTNFACE+1
+    mov wc.hbrBackground, COLOR_WINDOWTEXT+1
     mov wc.lpszMenuName, NULL
     mov wc.lpszClassName, OFFSET ClassName
     mov wc.hIconSm, 0
